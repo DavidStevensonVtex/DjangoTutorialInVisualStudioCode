@@ -100,3 +100,15 @@ If you have any problems, you can search for answers or ask a question on the [P
     python manage.py startapp hello
 
     The command creates a folder called hello that contains a number of code files and one subfolder.
+
+1. Modify hello/views.py to match the following code, which creates a single view for the app's home page:
+
+    from django.http import HttpResponse
+
+    def home(request):
+
+        return HttpResponse("Hello, Django!")
+
+1. Create a file, hello/urls.py
+
+1. The web_project folder also contains a urls.py file, which is where URL routing is actually handled. 
