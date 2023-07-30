@@ -72,3 +72,31 @@ If you have any problems, you can search for answers or ask a question on the [P
     python manage.py migrate
 
     A db.sqlite3 file is created under the hello_django folder.
+
+    When you run the server the first time, it creates a default SQLite database in the file db.sqlite3 that is intended for development purposes, but can be used in production for low-volume web apps. For additional information about databases, see the [Types of databases](https://code.visualstudio.com/docs/python/tutorial-django#_types-of-databases) section.
+
+1. To verify the Django project, make sure your virtual environment is activated, then start Django's development server using the command python manage.py runserver. The server runs on the default port 8000, and you see output like the following output in the terminal window:
+
+    Watching for file changes with StatReloader
+
+    Performing system checks...
+
+    System check identified no issues (0 silenced).
+
+    July 30, 2023 - 12:46:31
+
+    Django version 4.2.3, using settings 'web_project.settings'
+
+    Starting development server at http://127.0.0.1:8000/
+
+    Quit the server with CTRL-BREAK.
+
+1. When you're done, close the browser window and stop the server in VS Code using Ctrl+C as indicated in the terminal output window.
+
+### Create a Django app
+
+1. In the VS Code Terminal with your virtual environment activated, run the administrative utility's startapp command in your project folder (where manage.py resides):
+
+    python manage.py startapp hello
+
+    The command creates a folder called hello that contains a number of code files and one subfolder.
