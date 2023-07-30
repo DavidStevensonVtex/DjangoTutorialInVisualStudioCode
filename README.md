@@ -112,3 +112,7 @@ If you have any problems, you can search for answers or ask a question on the [P
 1. Create a file, hello/urls.py
 
 1. The web_project folder also contains a urls.py file, which is where URL routing is actually handled. 
+
+1. Save all modified files.
+
+1. In the VS Code Terminal, again with the virtual environment activated, run the development server with python manage.py runserver and open a browser to http://127.0.0.1:8000/ to see a page that renders "Hello, Django".
