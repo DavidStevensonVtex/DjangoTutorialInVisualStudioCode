@@ -116,3 +116,25 @@ If you have any problems, you can search for answers or ask a question on the [P
 1. Save all modified files.
 
 1. In the VS Code Terminal, again with the virtual environment activated, run the development server with python manage.py runserver and open a browser to http://127.0.0.1:8000/ to see a page that renders "Hello, Django".
+
+### Create a debugger launch profile
+
+1. Switch to Run view in VS Code (using the left-side activity bar or F5). You may see the message "To customize Run and Debug create a launch.json file". This means that you don't yet have a launch.json file containing debug configurations. VS Code can create that for you if you click on the create a launch.json file link
+
+1. Select the link and VS Code will prompt for a debug configuration. Select Python then Django from the dropdown and VS Code will populate a new launch.json file with a Django run configuration. The launch.json file contains a number of debugging configurations, each of which is a separate JSON object within the configuration array.
+
+1. Scroll down to and examine the configuration with the name "Python: Django":
+
+    The launch.json file should appear in Visual Studio Code.
+
+    This configuration tells VS Code to run "${workspaceFolder}/manage.py" using the selected Python interpreter and the arguments in the args list. Launching the VS Code debugger with this configuration, then, is the same as running python manage.py runserver in the VS Code Terminal with your activated virtual environment. (You can add a port number like "5000" to args if desired.) The "django": true entry also tells VS Code to enable debugging of Django page templates, which you see later in this tutorial.
+
+1. Test the configuration by selecting the Run > Start Debugging menu command, or selecting the green Start Debugging arrow next to the list (F5):
+
+1. Ctrl+click the http://127.0.0.1:8000/ URL in the terminal output window to open the browser and see that the app is running properly.
+
+1. Close the browser and stop the debugger when you're finished. To stop the debugger, use the Stop toolbar button (the red square) or the Run > Stop Debugging command (Shift+F5).
+
+1. You can now use the Run > Start Debugging at any time to test the app, which also has the benefit of automatically saving all modified files.
+
+### Explore the debugger
